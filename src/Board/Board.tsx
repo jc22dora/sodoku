@@ -14,7 +14,6 @@ export function Board(props: BoardProps) {
         } return false;
     }
     const onSquareChange = (e: any, i: number, j: number) => {
-        console.log(e["nativeEvent"]["data"])
         let tempboard = JSON.parse(JSON.stringify(board)); // enforce deep copy
         tempboard[i][j] = e["nativeEvent"]["data"].toString();
         props.setBoard(tempboard);
